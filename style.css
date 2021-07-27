@@ -1,0 +1,219 @@
+/* CSS Reset */
+/* Resetting margins, paddings, and borders */
+html, body,
+h1, h2, h3, h4, h5, h6,
+a, p, span,
+em, small, strong,
+sub, sup,
+mark, del, ins, strike,
+abbr, dfn,
+blockquote, q, cite,
+code, pre,
+ol, ul, li, dl, dt, dd,
+div, section, article,
+main, aside, nav,
+header, hgroup, footer,
+img, figure, figcaption,
+address, time,
+audio, video,
+canvas, iframe,
+details, summary,
+fieldset, form, label, legend,
+table, caption,
+tbody, tfoot, thead,
+tr, th, td {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Box sizing */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Sizing - Height */
+body {
+  min-height: 100vh;
+}
+
+/* Typography */
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+* {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a,
+a:visited {
+  color: inherit;
+}
+
+/* Resetting specific element styles */
+ol,
+ul {
+  list-style: none;
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+img {
+  border-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Basic rules */
+body {
+  background-color: rgb(238, 225, 225);
+  color: rgba(0, 0, 0, 0.792);
+  font-family: sans-serif;
+  font-size: .8rem;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 
+Flip Card
+Link to the original code: https://www.w3schools.com/howto/howto_css_flip_card.asp
+*/
+
+/* 
+The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect.
+*/
+
+.flip-card {
+  background-color: transparent;
+  height: 400px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  width: 300px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  height: 100%;
+  position: relative;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, 
+.flip-card-back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* Safari */
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  border-radius: 10px;
+}
+
+.flip-card-front img {
+  border-radius: 10px;
+  height: 400px;
+  width: 300px;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  transform: rotateY(180deg);
+} 
+
+.flip-card-back img {
+  border: 3px solid #fff;
+  border-radius: 50%;
+  height: 150px;
+  margin: 40px auto 15px;
+  outline: 3px solid rgb(238, 169, 169);
+  object-fit: cover;
+  width: 150px;
+}
+
+h2 {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.link, 
+.mail {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #000;
+  max-width: 200px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  height: 40px;
+}
+
+.link {
+  margin-bottom: 8px;
+  transition: all .3s;
+}
+
+.link:hover {
+  background-color: gainsboro;
+  border: 1px solid gainsboro;
+}
+
+.link:active {
+  background-color: #fff;
+  border: 1px solid #000;
+  color: rgba(0, 0, 0, 1);
+  transition: none;
+}
+
+.mail {
+  transition: all .3s;
+}
+
+.mail:hover {
+  background-color: #dd2215d3;
+  border: 1px solid #dd2215d3;
+}
+
+.mail:active {
+  background-color: #fff;
+  border: 1px solid #000;
+  color: rgba(0, 0, 0, 1);
+  transition: none;
+}
+
+.material-icons {
+  margin-right: 7px;
+}
