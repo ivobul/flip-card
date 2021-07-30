@@ -175,7 +175,6 @@ h2 {
   justify-content: center;
   border: 1px solid #000;
   max-width: 200px;
-  text-transform: uppercase;
   margin: 0 auto;
   height: 40px;
 }
@@ -202,8 +201,8 @@ h2 {
 }
 
 .mail:hover {
-  background-color: #dd2215d3;
-  border: 1px solid #dd2215d3;
+  background-color: #f17068;
+  border: 1px solid #f17068;
 }
 
 .mail:active {
