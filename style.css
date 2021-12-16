@@ -79,7 +79,7 @@ a {
 }
 
 /* Basic rules */
-body {
+.body {
   background-color: rgb(238, 225, 225);
   color: rgba(0, 0, 0, 0.792);
   font-family: sans-serif;
@@ -87,9 +87,9 @@ body {
 }
 
 .container {
+  align-items: center;
   display: flex;
   min-height: 100vh;
-  align-items: center;
   justify-content: center;
 }
 
@@ -109,7 +109,7 @@ The flip box container - set the width and height to whatever you want. We have 
 }
 
 /* This container is needed to position the front and back side */
-.flip-card-inner {
+.flip-card__inner {
   height: 100%;
   position: relative;
   text-align: center;
@@ -119,13 +119,13 @@ The flip box container - set the width and height to whatever you want. We have 
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
+.flip-card__inner:hover {
   transform: rotateY(180deg);
 }
 
 /* Position the front and back side */
-.flip-card-front, 
-.flip-card-back {
+.flip-card__front, 
+.flip-card__back {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden; /* Safari */
   height: 100%;
@@ -134,26 +134,26 @@ The flip box container - set the width and height to whatever you want. We have 
 }
 
 /* Style the front side (fallback if image is missing) */
-.flip-card-front {
+.flip-card__front {
   background-color: #bbb;
   border-radius: 10px;
 }
 
-.flip-card-front img {
+.flip-card__front-image {
   border-radius: 10px;
   height: 400px;
   width: 300px;
 }
 
 /* Style the back side */
-.flip-card-back {
+.flip-card__back {
   background-color: #fff;
   border-radius: 10px;
   border: 1px solid #fff;
   transform: rotateY(180deg);
 } 
 
-.flip-card-back img {
+.flip-card__back-image {
   border: 3px solid #fff;
   border-radius: 50%;
   height: 150px;
@@ -163,54 +163,48 @@ The flip box container - set the width and height to whatever you want. We have 
   width: 150px;
 }
 
-h2 {
+.flip-card__back-heading {
   font-size: 1.2rem;
   margin-bottom: 30px;
 }
 
-.link, 
-.mail {
+.flip-card__follow-link, 
+.flip-card__mailto {
   align-items: center;
   display: flex;
   justify-content: center;
   border: 1px solid #000;
   border-radius: 30px;
+  height: 40px;
   max-width: 200px;
   margin: 0 auto;
-  height: 40px;
-}
-
-.link {
-  margin-bottom: 8px;
   transition: all .3s;
 }
 
-.link:hover {
-  background-color: gainsboro;
-  border: 1px solid gainsboro;
+.flip-card__follow-link {
+  margin-bottom: 8px;
 }
 
-.link:active {
+.flip-card__follow-link:hover {
+  background-color: #dcdcdc;
+  border: 1px solid #dcdcdc;
+}
+
+.flip-card__follow-link:active {
   background-color: #fff;
   border: 1px solid #000;
   color: rgba(0, 0, 0, 1);
-  transition: none;
 }
 
-.mail {
-  transition: all .3s;
-}
-
-.mail:hover {
+.flip-card__mailto:hover {
   background-color: #f17068;
   border: 1px solid #f17068;
 }
 
-.mail:active {
+.flip-card__mailto:active {
   background-color: #fff;
   border: 1px solid #000;
   color: rgba(0, 0, 0, 1);
-  transition: none;
 }
 
 .material-icons {

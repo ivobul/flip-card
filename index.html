@@ -7,25 +7,25 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="body">
     <div class="container">
       <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="images/profile.jpg" alt="Smiling woman">
-          </div>
-          <div class="flip-card-back">
-            <img src="images/profile.jpg" alt="Smiling woman">
-            <h2>Jessica Smith</h2>
-            <a href="#" class="link">Follow</a>
-            <a href="#" class="mail">        
+        <div class="flip-card__inner">
+          <div class="flip-card__front">
+            <img class="flip-card__front-image" src="images/profile.jpg" alt="Smiling woman">
+          </div><!-- Flip card front -->
+          <div class="flip-card__back">
+            <img class="flip-card__back-image" src="images/profile.jpg" alt="Smiling woman">
+            <h2 class="flip-card__back-heading">Jessica Smith</h2>
+            <a href="#" class="flip-card__follow-link">Follow</a>
+            <a href="mailto:someone@yoursite.com" class="flip-card__mailto">        
               <span class="material-icons">mail_outline</span>
               <span>Message</span>
             </a>
-          </div>
-        </div>
-      </div> 
-    </div>
+          </div><!-- Flip card back -->
+        </div><!-- Flip card inner -->
+      </div><!-- Flip card -->
+    </div><!-- Container -->
      
     <script src="script.js"></script>
   </body>
